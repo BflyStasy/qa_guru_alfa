@@ -38,13 +38,5 @@ public class AlfaTests {
         //Нажимаем на "Вклады"
         $(byText("Вклады")).click();
 
-        //Нажимаем на "Депозиты"
-        $$(byText("Депозиты")).find(visible).click();
-
-        //Нажимаем на ссылку "Архивные депозиты"
-        $(".col-sm-frame").$("a").click();
-
-        //Проверяем, что отобразилось ровно 3 архивных депозита
-        $$(".product-cell__cell").shouldBe(CollectionCondition.size(3));
     }
 }
